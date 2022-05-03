@@ -22,7 +22,7 @@
   "panels": [
     {
       "cacheTimeout": null,
-      "colorBackground": false,
+      "colorBackground": true,
       "colorPostfix": false,
       "colorPrefix": false,
       "colorValue": false,
@@ -106,7 +106,7 @@
     },
     {
       "cacheTimeout": null,
-      "colorBackground": false,
+      "colorBackground": true,
       "colorPostfix": false,
       "colorPrefix": false,
       "colorValue": false,
@@ -556,7 +556,7 @@
       ],
       "targets": [
         {
-          "expr": "((ssl_cert_not_after{instance=~\"$instance\",job=~\"$job\"} - time())/24/60/60)",
+          "expr": "((ssl_cert_not_after{instance=~\"$instance\",job=~\"$job\"} - time())/24/60/60) or ((ssl_kubernetes_cert_not_after{instance=~\"$instance\",job=~\"$job\"} - time())/24/60/60)",
           "format": "table",
           "instant": true,
           "interval": "",
