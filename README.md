@@ -410,3 +410,6 @@ trust.
 
 You can find a simple dashboard [here](contrib/grafana/dashboard.json) that tracks
 certificate expiration dates and target connection errors.
+
+## Flow
+![Screenshot](Flow.PNG)
